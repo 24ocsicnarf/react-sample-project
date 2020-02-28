@@ -1,17 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "@emotion/styled";
 
-import Hello, { Hi } from './components/Greet';
-import Welcome from './components/Welcome';
+import "./App.css";
+import WeatherCard from "./components/WeatherCard/component";
 
 function App() {
+  const App = styled.div`
+    margin: 0 auto;
+    color: white;
+  `;
   return (
-    <div className="App">
-      <Hello name="Albert" />
-      <Hi />
-      <Welcome />
-    </div>
+    <App>
+      <WeatherCard temp={30} />
+      <WeatherCard temp={20} />
+      <WeatherCard temp={-20} />
+    </App>
   );
 }
 
